@@ -23,12 +23,27 @@ io.on('connection', function(socket){
 });
 
 io.on('connection', function(socket){
-    console.log('User Connected.');
+
+
+    console.log('['+ getTimeStamp() + ']' + ' User Connected.');
     socket.on('disconnect', function(){
-        console.log('User Disconnected.');
+        console.log('['+ getTimeStamp() + ']' + ' User Disconnected.');
     });
 });
 
 http.listen(3000, function(){
     console.log('Server running at http://127.0.0.1:3000/');
 });
+
+function getTimeStamp()
+{
+    var currentdate = new Date();
+    var datetime = "Last Sync: " + currentdate.getDate() + "/"
+        + (currentdate.getMonth()+1)  + "/"
+        + currentdate.getFullYear() + " @ "
+        + currentdate.getHours() + ":"
+        + currentdate.getMinutes() + ":"
+        + currentdate.getSeconds();
+
+    return datetime;
+}

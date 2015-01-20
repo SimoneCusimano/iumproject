@@ -3,18 +3,17 @@
   "description": "Project for Cagliari University IUM Course.",
   "repository": "https://github.com/SimoneCusimano/iumproject.git",
   "dependencies": {
-      "async": "0.1.22",
-      "express": "^4.4.0",
-      "express-session": "^1.2.1",
-      "socket.io": "~0.9.16",
+      "async": "*",
+      "express": "*",
+      "express-session": "*",
+      "socket.io": "*",
       "request": "*"
   },
   "devDependencies": {
       "mocha": "*",
       "chai": "*",
       "socket.io-client": "*",
-      "jade": "*",
-      "nodemon": "*"
+      "jade": "*"
   },
   "main": "index.js"
 }
